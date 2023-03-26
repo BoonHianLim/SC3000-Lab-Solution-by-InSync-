@@ -1,0 +1,24 @@
+competitors(sumsum, appy).
+
+develop(sumsum,galactica-s3).
+
+steal(stevey,galactica-s3).
+
+steal(pricai,galactica-s3).
+
+boss(pricai, sumsum).
+
+boss(stevey,appy).
+
+competitors(X,X):- false.
+
+competitors(X,Y):- competitors(Y,X).
+
+
+
+unethical(StoleBoss):- steal(StoleBoss,Tech),business(RivalCompany,Tech),boss(StoleBoss,OwnCompany),rivals(OwnCompany,RivalCompany).
+
+business(X,Y):-develop(X,Y).
+
+rivals(X,Y):-competitors(X,Y).
+
